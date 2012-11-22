@@ -3,7 +3,7 @@ from bitdeli.widgets import Users, Text, set_theme, get_themes
 
 print '\n'.join(get_themes())
 
-set_theme('lime')
+set_theme('safari')
 
 HASHES = ['205e460b479e2e5b48aec07710c08d50',
           '25c7c18223fb42a4c6ae1c8db6f50f9b',
@@ -17,22 +17,28 @@ HASHES = ['205e460b479e2e5b48aec07710c08d50',
 for profile in bitdeli.profiles():
     pass
 
-Text(size=(12, 2),
-     head='All systems UP!')
+Text(size=(8, 2),
+     head='All systems:',
+     color=2)
+Text(size=(3, 2), head="UP!", color=3)
+Text(size=(12,1))
+
+Text(size=(4, 2),
+     head='8 new users:',
+     color=1)
+Users(size=(8, 2),
+      large=True,
+      data=[{'gravatar_hash': h} for h in HASHES])
+
 Text(label='Conversions',
      size=(4, 2),
      head='8.13%',
-     color=3)
+     color=1)
 Text(label='Revenue',
      size=(4, 2),
      head='$6,412',
-     color=2)
+     color=3)
 Text(label='Avg. Latency',
      size=(4, 2),
-     head='320ms')
-Text(size=(3, 2),
-     head='8 new users:',
-     color=1)
-Users(size=(9, 2),
-      large=True,
-      data=[{'gravatar_hash': h} for h in HASHES])
+     head='320ms',
+     color=2)

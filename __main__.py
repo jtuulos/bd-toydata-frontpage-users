@@ -1,5 +1,5 @@
 import bitdeli
-from bitdeli.widgets import Users, Text, set_theme, get_themes
+from bitdeli.widgets import Title, Description, Users, Text, set_theme, get_themes
 
 print '\n'.join(get_themes())
 
@@ -42,3 +42,6 @@ Text(label='Avg. Latency',
      size=(4, 2),
      head='320ms',
      color=2)
+
+Title("Uptime is 99.5%")
+Description("The predicted churn rate is 8.13%")
